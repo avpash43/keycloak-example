@@ -1,0 +1,131 @@
+server:
+  port: 8888
+
+keycloak:
+  auth-server-url: http://127.0.0.1:8080/auth
+  realm: Demo
+  resource: bearer-app
+  bearer-only: true
+  ssl-required: none
+  security-constraints:
+    - auth-roles:
+        - USER
+      security-collections:
+        - patterns:
+            - /*
+    - auth-roles:
+        - OPERATOR
+      security-collections:
+        - patterns:
+            - /v1/oper
+
+#keycloak:
+#  auth-server-url: http://localhost:8080/auth
+#  realm: Demo
+#  resource: web-app
+#  public-client: true
+#  security-constraints:
+#    - auth-roles:
+#        - USER
+#      security-collections:
+#        - patterns:
+#            - /*
+#    - auth-roles:
+#        - OPERATOR
+#      security-collections:
+#        - patterns:
+#            - /v1/oper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#keycloak:
+#  auth-server-url: http://localhost:8080/auth
+#  realm: EBSCO-Keycloak
+#  resource: login-app
+#  public-client: true
+#  security-constraints:
+#    - auth-roles:
+#        - USER
+#      security-collections:
+#        - patterns:
+#            - /*
+#    - auth-roles:
+#        - OPERATOR
+#      security-collections:
+#        - patterns:
+#            - /v1/test
+
+#keycloak:
+#  auth-server-url: http://127.0.0.1:8080/auth
+#  realm: EBSCO-Keycloak
+#  resource: bearer-app
+#  bearer-only: true
+#  ssl-required: none
+#  security-constraints:
+#    - auth-roles:
+#        - USER
+#      security-collections:
+#        - patterns:
+#            - /*
+#    - auth-roles:
+#        - OPERATOR
+#      security-collections:
+#        - patterns:
+#            - /v1/test
+
+#keycloak:
+#  auth-server-url: http://localhost:8080/auth
+#  realm: SpringBootKeycloak
+#  resource: conf-app
+#  credentials:
+#    secret: d0068fe6-d633-4d31-95c1-ea2210f23754
+#  security-constraints:
+#    - auth-roles:
+#        - USER
+#      security-collections:
+#        - patterns:
+#            - /*
+#    - auth-roles:
+#        - OPERATOR
+#      security-collections:
+#        - patterns:
+#            - /v1/test
+
+logging:
+  level:
+    org.apache.catalina: DEBUG
